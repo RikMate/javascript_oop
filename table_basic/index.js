@@ -132,15 +132,14 @@ rowSpanTable = new RowSpanTable(rowspanHeaderArr);
 colSpanTable.render(colspanBodyArr);
 rowSpanTable.render(rowspanBodyArr);
 
-const button = document.createElement("button");
-
-button.innerText = "rowspan";
-button.addEventListener("click", onButtonClick.bind(rowSpanTable))
-document.body.appendChild(button);
+const button1 = document.createElement("button");
+button1.innerText = "rowspan";
+button1.addEventListener("click", onButtonClick1.bind(rowSpanTable))
+document.body.appendChild(button1);
 /**
  * @this {rowSpanTable} példány
  */
-function onButtonClick()
+function onButtonClick1()
 {
     /**
      * @type {RowspanRowType}
@@ -173,5 +172,42 @@ function onButtonClick()
         tr.appendChild(td3);
         tr.appendChild(td4);
         tr.appendChild(td5);
+    })
+}
+
+const button2 = document.createElement("button");
+button2.innerText = "Colspan Hozzáadás";
+document.body.appendChild(button2);
+button2.addEventListener("click", onButtonClick2.bind(colspanTable))
+
+/**
+ * @this {colspanTable}
+ */
+function onButtonClick2(){
+    /**
+     * @type {ColspanRowType}
+     */
+    const obj = {
+        author: "Thomas Mann", 
+        title: "Mario és a varázsló", 
+        concepts: "Kisregény"
+    }
+    this.ujMetodus(function(body){
+        const tr = document.createElement("tr");
+
+        const td1 = document.createElement("td");
+        td1.innerText = obj.author;
+        tr.appendChild(td1);
+        
+        const td2 = document.createElement("td");
+        td2.innerText = obj.title;
+        tr.appendChild(td2);
+
+        const td3 = document.createElement("td");
+        td3.innerText = obj.concepts;
+        td3.colSpan = "2";
+        tr.appendChild(td3);
+
+        body.appendChild(tr);
     })
 }
