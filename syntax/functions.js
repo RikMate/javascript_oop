@@ -6,7 +6,9 @@
 function Muvelet(a, b, callback)
 { 
     const result = callback(a, b)
-    return {result};
+    return {
+        result : result
+    };
 }
 
 function MuveletLetrehoz(jel)
@@ -15,6 +17,18 @@ function MuveletLetrehoz(jel)
     {
         return (a, b) => {
             return a + b;
+        }
+    }
+    if(jel == "-")
+    {
+        return (a, b) => {
+            return a - b;
+        }
+    }
+    if(jel == "*")
+    {
+        return (a, b) => {
+            return a * b;
         }
     }
 }
