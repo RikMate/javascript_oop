@@ -1,45 +1,41 @@
 /**
- * @import {functions.js}
+ * @import {FromFieldType, HeaderArrayType, ColSpanType, RowSpanType} from './functions.js'
  * 
  * @callback addCallback
- * @param {ColspanType | RowspanType} param
+ * @param {ColSpanType | RowSpanType}
  * @returns {void}
  */
 
-class Manager
-{
+class Manager{
     /**
-     * @type {ColspanType[] | RowspanType[]}
+     * @type {ColSpanType[] | RowSpanType[]}
      */
-    #tableArray;
+    #dataArry;
+
     /**
      * @type {addCallback}
      */
     #addCallback;
-    constructor()
-    {
-        this.#tableArray = [];
+
+    /**
+     * @param {addCallback} value
+     */
+    set addCallback(value){
+        this.#addCallback=value
+    }
+
+    constructor(){
+        this.#dataArry=[]
     }
 
     /**
-     * @param {ColspanType || RowspanType} element
+     * @param {ColspanType | RowspanType} colRowType 
+     * @returns {void}
      */
-    addElement(element)
-    {
-        this.#tableArray.push(element);
-        if(this.#addCallback)
-        {
-            this.#addCallback(element);
-        }
-    }
-
-    /**
-     * @param {addCallback} callback
-     */
-    set Setter(callback)
-    {
-        this.#addCallback = callback;
+    addElement(colRowType){
+        this.#dataArry.push(colRowType)
+        if(this.#addCallback){this.#addCallback(colRowType)}
     }
 }
 
-export {Manager};
+export {Manager}

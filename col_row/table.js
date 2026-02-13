@@ -1,57 +1,48 @@
+import { Manager } from "./manager.js";
 /**
- * @callback TableCallback
+ * @callback Tablecallback
  * @param {HTMLTableSectionElement} tbody
- * @param {ColspanType | RowspanType} table
+ * @param {import("./functions").ColspanType | import("./functions").RowspanType} type
  * @returns {void}
  */
 
-import { Manager } from "./manager";
-import("functions.js").headerArray;
-
-class Table
-{
-    /**
-     * @type {HTMLTableElement}
-     */
+class Table{
+    /**@type {HTMLTableSectionElement} */
     #tbody;
+
+    /**@type {Manager} */
+    #manager;
+
     /**
-     * @type {Manager}
+     * @param {import("./functions").HeaderArrayType} headerArry 
+     * @param {Manager} manager 
      */
-    #manager
-    
-    /**
-     * @param {HeaderArrayType} headerArray
-     * @param {Manager} manager
-     */
-    constructor(headerArray, manager)
-    {
-        this.#manager = manager;
-
-        const table = document.createElement("table");
-        document.body.appendChild(table);
-
-        const thead = document.createElement("thead");
-        const tr = document.createElement("tr");
-        thead.appendChild(tr);
-
-        for(const item of headerArray)
-        {
-            const th = document.createElement("th");
-            th.innerText = item;
-            tr.appendChild(th);
+    constructor(headerArry, manager){
+        this.#manager=manager
+        const table = document.createElement('table')
+        document.body.appendChild(table)
+        const thead= document.createElement('thead')
+        table.appendChild(thead)
+        const trh= document.createElement('tr')
+        thead.appendChild(trh)
+        for(const h of headerArry){
+            const th = document.createElement('th')
+            th.innerText=h.name
+            trh.appendChild(th)
+            if(h.colspan){th.colSpan=2}
         }
 
-        this.#tbody = createElement("tbody");
-        table.appendChild(this.#tbody);
+        const tbody = document.createElement('tbody')
+        table.appendChild(tbody)
+        this.#tbody=tbody
     }
 
     /**
-     * @param {TableCallback} callback
+     * @param {Tablecallback} callback 
      */
-    setAppendRow(callback)
-    {
-        this.#manager.Setter = (elem) => {
-            callback(this.#tbody, elem);
-        }
+    setAppendRow(callback){
+        this.#manager.addCallback=(elem)=>{callback(this.#tbody,elem)}
     }
 }
+
+export {Table}
