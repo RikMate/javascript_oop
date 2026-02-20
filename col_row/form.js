@@ -3,6 +3,10 @@ import { Manager } from "./manager.js";
 class formController
 {
     /**
+     * @type {HTMLFormElement}
+     */
+    #form;
+    /**
      * @type {Manager}
      */
     #manager;
@@ -20,19 +24,20 @@ class formController
     {
         this.#manager = manager;
         const form = document.createElement("form");
+        this.#form = form;
         document.body.appendChild(form);
         this.#formFieldElemList = [];
 
         const button = document.createElement("button");
         button.innerText = "Submit";
-        form.appendChild(button);
+        this.#form.appendChild(button);
         for(const formField of formFieldList)
         {
-            const formFieldElem = new FormField(formField.id, formField.name, formField.label, formField.required, form);
+            const formFieldElem = new FormField(formField.id, formField.name, formField.label, formField.required, this.#form);
             this.#formFieldElemList.push(formFieldElem);
         }
 
-        form.addEventListener("submit", (e) => {
+        this.#form.addEventListener("submit", (e) => {
             e.preventDefault();
 
             const elem = this.#createElement();
