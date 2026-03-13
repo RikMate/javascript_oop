@@ -28,20 +28,16 @@ const headerArray = ['Szerző', 'Mű', 'Fogalom']
 
 const navbar = new NavigationBar();
 const manager = new AutherManager();
-manager.addElement({
-    author: "aaaa",
-    concept: "bbb",
-    work: "cccc"
-})
 navbar.appendTo(document.body);
 
 const tableView = new TableView("table", headerArray, manager);
 tableView.appendTo(document.body);
 navbar.addViewElement("Táblázat", tableView);
 
-const formView = new FormView("tableform", headerArray);
+const formView = new FormView("tableform", formFields, manager);
 formView.appendTo(document.body);
 navbar.addViewElement("Form", formView);
 
+//navbar.addViewElement("Export/Import", )
+
 navbar.activate("table");
-manager.getAllElement();

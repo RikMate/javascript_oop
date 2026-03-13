@@ -25,15 +25,25 @@ class TableView extends ViewElement
         this.#tbody = document.createElement("tbody");
         table.appendChild(this.#tbody);
         this.#manager.TableCallback = (autherList) => {
-            for(const auther of autherList)
-            {
-                const tr = document.createElement("tr");
-                this.#tbody.appendChild(tr);
-
-                createTableCell(tr, auther.name);
-                createTableCell(tr, auther.work);
-                createTableCell(tr, auther.concept);
-            }
+          if(autherList.length == 0)
+          {
+              const tr = document.createElement("tr");
+              this.#tbody.appendChild(tr);
+              const td = createTableCell(tr, "Nincs megjelenitendo sor");
+              td.colSpan = 3;
+          }
+          for(const auther of autherList)
+          {
+              const tr = document.createElement("tr");
+              this.#tbody.appendChild(tr);  
+              createTableCell(tr, auther.name);
+              createTableCell(tr, auther.work);
+              createTableCell(tr, auther.concept);
+          }
+        }
+        this.activateCallback = () => {
+            this.#tbody.innerHTML = '';
+            this.#manager.getAllElement();
         }
     }
 }

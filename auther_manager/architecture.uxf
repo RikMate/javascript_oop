@@ -65,18 +65,18 @@ manager: AutherManager)
 (mindennek getter, setter)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>272</x><y>848</y><w>264</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
 m1=0..*</panel_attributes><additional_attributes>10;10;310;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>376</x><y>640</y><w>136</w><h>40</h></coordinates><panel_attributes>TableCallback
 --
-(autherList: Auther[]): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>560</y><w>88</w><h>96</h></coordinates><panel_attributes>lt=&lt;.
+(autherList: Auther[]): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>560</y><w>80</w><h>96</h></coordinates><panel_attributes>lt=&lt;.
 implementalja</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>640</y><w>224</w><h>184</h></coordinates><panel_attributes>lt=&lt;-
 m1= getAllElement hivja</panel_attributes><additional_attributes>260;10;10;10;10;210</additional_attributes></element><element><id>UMLClass</id><coordinates><x>776</x><y>640</y><w>136</w><h>48</h></coordinates><panel_attributes>AddElementResultCallback
 --
-(message: string): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>520</y><w>88</w><h>136</h></coordinates><panel_attributes>lt=&lt;.
-implementalja</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>680</y><w>184</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
+(message: string): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>520</y><w>80</w><h>136</h></coordinates><panel_attributes>lt=&lt;.
+implementalja</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>680</y><w>176</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
 az addElement meghivja</panel_attributes><additional_attributes>70;10;70;220;10;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>936</x><y>712</y><w>112</w><h>64</h></coordinates><panel_attributes>AutherType
 --
 + auther: string
 + work: string
-+ concept: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>944</x><y>520</y><w>64</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
-Eloallitja</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>520</y><w>64</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
++ concept: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>944</x><y>520</y><w>56</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
+Eloallitja</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>520</y><w>56</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
 Eloallitja</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>768</y><w>320</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
 Az autherType-ot Auther osztaly peldanyozva alakitja at</panel_attributes><additional_attributes>290;10;290;180;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>608</y><w>184</w><h>128</h></coordinates><panel_attributes>FormField
 --

@@ -2,6 +2,10 @@
  * @callback TableCallback
  * @param {Auther[]} autherList
  * @returns {void}
+ * 
+ * @callback AddElementResultCallback
+ * @param {string} message
+ * @returns {void}
  */
 class AutherManager
 {
@@ -9,11 +13,21 @@ class AutherManager
     #autherList;
     /**@type {TableCallback} */
     #tableCallback;
+    /**@type {AddElementResultCallback} */
+    #addElementResultCallback;
 
     /**@param {TableCallback} value  */
-    set TableCallback(value)
+    set tableCallback(value)
     {
         this.#tableCallback = value
+    }
+
+    /**
+     * @param {AddElementResultCallback} value 
+     */
+    set addElementResultCallback(value)
+    {
+        this.#addElementResultCallback = value;
     }
 
     constructor()
@@ -32,7 +46,14 @@ class AutherManager
         auther.name = element.author;
         auther.work = element.work;
         auther.concept = element.concept;
-        this.#autherList.push(auther);
+        if(auther.validate())
+        {
+            this.#autherList.push(auther);
+            this.#addElementResultCallback("Sikeres elemfelvetel");
+        } else
+        {
+            this.#addElementResultCallback("Nem volt sikeres elemfelvetel");
+        }
     }
 
     /**
@@ -87,6 +108,14 @@ class Auther{
     set concept(value)
     {
         this.#concept = value;
+    }
+
+    /**
+     * @returns {boolean}
+     */
+    validate()
+    {
+        return this.#name && this.#concept && this.#work
     }
 
 }
