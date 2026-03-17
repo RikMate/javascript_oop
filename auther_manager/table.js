@@ -24,7 +24,7 @@ class TableView extends ViewElement
         table.appendChild(thead);
         this.#tbody = document.createElement("tbody");
         table.appendChild(this.#tbody);
-        this.#manager.TableCallback = (autherList) => {
+        this.#manager.tableCallback = (autherList) => {
           if(autherList.length == 0)
           {
               const tr = document.createElement("tr");
