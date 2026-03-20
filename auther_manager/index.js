@@ -1,9 +1,10 @@
 /**
- * @typedef {{id: number, author?: string, work?: string, concept?: string}} AuthorType
+ * @typedef {{id: number; author?: string; work?: string; concept?: string}} AuthorType
  * @typedef {{id: string, label: string, name: string}} FormFieldType
  */
 
 import { FormView } from "./form.js";
+import { ImportView } from "./importExport.js";
 import { AutherManager } from "./manager.js";
 import { NavigationBar } from "./navigationBar.js"
 import { TableView } from "./table.js";
@@ -38,6 +39,8 @@ const formView = new FormView("tableform", formFields, manager);
 formView.appendTo(document.body);
 navbar.addViewElement("Form", formView);
 
-//navbar.addViewElement("Export/Import", )
+const importExport = new ImportView("importexport", manager);
+importExport.appendTo(document.body);
+navbar.addViewElement("Export/Import", importExport);
 
 navbar.activate("table");

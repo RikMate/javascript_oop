@@ -49,12 +49,12 @@ class FormView extends ViewElement
     }
 
     /**
-     * @returns {AutherType}
+     * @returns {AuthorType}
      */
     createElement()
     {
         /**
-         * @type {AutherType}
+         * @type {AuthorType}
          */
         let result = {};
         for(const field of this.#formInputList)

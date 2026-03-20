@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>288</x><y>160</y><w>240</w><h>144</h></coordinates><panel_attributes>ViewElement
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>569</x><y>160</y><w>240</w><h>144</h></coordinates><panel_attributes>ViewElement
 --
 - div: HTMLDivElement
 - id: string
@@ -9,29 +9,29 @@
 + set activateCallback(value: ActivateCallback): void
 + get div(): HTMLDivElement
 + active(id: string): void
-+ get id(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>296</x><y>0</y><w>192</w><h>56</h></coordinates><panel_attributes>Az activate id alapján, elrejti vagy
++ get id(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>577</x><y>0</y><w>192</w><h>56</h></coordinates><panel_attributes>Az activate id alapján, elrejti vagy
 megjeleníti az adott div elementet
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>192</y><w>184</w><h>64</h></coordinates><panel_attributes>ActivateCallback
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>929</x><y>192</y><w>184</w><h>64</h></coordinates><panel_attributes>ActivateCallback
 --
-(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>200</y><w>144</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
-Meghivja az activate</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>392</y><w>248</w><h>176</h></coordinates><panel_attributes>NavigationBar
+(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>200</y><w>144</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+Meghivja az activate</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>321</x><y>392</y><w>248</w><h>176</h></coordinates><panel_attributes>NavigationBar
 --
 - ViewElementList: ViewElement[]
 --
 + activate(id: string): void
-+ addViewElement(element: ViewElement): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>0</x><y>48</y><w>232</w><h>64</h></coordinates><panel_attributes>A navigationBar felulirja az activate-t
++ addViewElement(element: ViewElement): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>281</x><y>48</y><w>232</w><h>64</h></coordinates><panel_attributes>A navigationBar felulirja az activate-t
 ez lesz a radiogomb eventlistenerben.
 A fuggvényen belul vegigiteralunk a
 viewElementListan, es meghivjuk az activateket
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>296</y><w>240</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>280;10;280;40;10;40;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>96</x><y>224</y><w>208</w><h>184</h></coordinates><panel_attributes>lt=&lt;-
-m1=0..*</panel_attributes><additional_attributes>240;10;10;10;10;210</additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>392</y><w>336</w><h>176</h></coordinates><panel_attributes>TableView
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>457</x><y>296</y><w>240</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>280;10;280;40;10;40;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>377</x><y>224</y><w>208</w><h>184</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>240;10;10;10;10;210</additional_attributes></element><element><id>UMLClass</id><coordinates><x>633</x><y>392</y><w>336</w><h>176</h></coordinates><panel_attributes>TableView
 --
 - manager: AutherManager
 - tbody: HTMLTableSectionElement
 --
 + constructor(id: string,
 headerArray: string[], manager: AutherManager)
-- tableCallback(): TableCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>296</y><w>144</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;160;40;160;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>392</y><w>208</w><h>136</h></coordinates><panel_attributes>FormView
+- tableCallback(): TableCallback</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>673</x><y>296</y><w>144</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;160;40;160;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1041</x><y>392</y><w>208</w><h>136</h></coordinates><panel_attributes>FormView
 --
 - formFieldList: FormField[]
 - manager: AutherManager
@@ -40,11 +40,11 @@ headerArray: string[], manager: AutherManager)
 + constructor(id: string,
 formFieldTypeList: FormFieldType[],
 manager: AutherManager)
-- createElement(): AutherType</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>296</y><w>488</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;590;40;590;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1000</x><y>392</y><w>240</w><h>136</h></coordinates><panel_attributes>ImportView
+- createElement(): AutherType</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>673</x><y>296</y><w>488</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;590;40;590;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1281</x><y>392</y><w>240</w><h>136</h></coordinates><panel_attributes>ImportView
 --
 - manager: AutherManager
 --
-+ contructor(id: string, manager: AutherManager)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>296</y><w>744</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;910;40;910;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>808</y><w>272</w><h>128</h></coordinates><panel_attributes>AutherManager
++ contructor(id: string, manager: AutherManager)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>673</x><y>296</y><w>744</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;910;40;910;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>801</x><y>808</y><w>272</w><h>128</h></coordinates><panel_attributes>AutherManager
 --
 - autherList: Auther[]
 - tableCallback: TableCallback
@@ -55,30 +55,31 @@ manager: AutherManager)
 + getAllElement(): void
 + addElementList(elementList: AutherType[]): void
 + getExport(): string
-(callbackek setterek)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>64</x><y>808</y><w>216</w><h>96</h></coordinates><panel_attributes>Auther
+(callbackek setterek)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>345</x><y>808</y><w>216</w><h>112</h></coordinates><panel_attributes>Auther
 --
 - id: string
 - name: string
 - work: string
 - concept: string
 --
-(mindennek getter, setter)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>272</x><y>848</y><w>264</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
-m1=0..*</panel_attributes><additional_attributes>10;10;310;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>376</x><y>640</y><w>136</w><h>40</h></coordinates><panel_attributes>TableCallback
+(mindennek getter, setter)
++ validate(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>553</x><y>848</y><w>264</w><h>32</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>10;10;310;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>657</x><y>640</y><w>136</w><h>40</h></coordinates><panel_attributes>TableCallback
 --
-(autherList: Auther[]): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>432</x><y>560</y><w>80</w><h>96</h></coordinates><panel_attributes>lt=&lt;.
-implementalja</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>640</y><w>224</w><h>184</h></coordinates><panel_attributes>lt=&lt;-
-m1= getAllElement hivja</panel_attributes><additional_attributes>260;10;10;10;10;210</additional_attributes></element><element><id>UMLClass</id><coordinates><x>776</x><y>640</y><w>136</w><h>48</h></coordinates><panel_attributes>AddElementResultCallback
+(autherList: Auther[]): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>713</x><y>560</y><w>88</w><h>96</h></coordinates><panel_attributes>lt=&lt;.
+implementalja</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>449</x><y>640</y><w>224</w><h>184</h></coordinates><panel_attributes>lt=&lt;-
+m1= getAllElement hivja</panel_attributes><additional_attributes>260;10;10;10;10;210</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1057</x><y>640</y><w>136</w><h>48</h></coordinates><panel_attributes>AddElementResultCallback
 --
-(message: string): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>832</x><y>520</y><w>80</w><h>136</h></coordinates><panel_attributes>lt=&lt;.
-implementalja</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>680</y><w>176</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
-az addElement meghivja</panel_attributes><additional_attributes>70;10;70;220;10;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>936</x><y>712</y><w>112</w><h>64</h></coordinates><panel_attributes>AutherType
+(message: string): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1113</x><y>520</y><w>88</w><h>136</h></coordinates><panel_attributes>lt=&lt;.
+implementalja</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1065</x><y>680</y><w>184</w><h>192</h></coordinates><panel_attributes>lt=&lt;-
+az addElement meghivja</panel_attributes><additional_attributes>70;10;70;220;10;220</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1217</x><y>712</y><w>112</w><h>64</h></coordinates><panel_attributes>AutherType
 --
 + auther: string
 + work: string
-+ concept: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>944</x><y>520</y><w>56</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
-Eloallitja</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>520</y><w>56</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
-Eloallitja</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>768</y><w>320</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
-Az autherType-ot Auther osztaly peldanyozva alakitja at</panel_attributes><additional_attributes>290;10;290;180;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>576</x><y>608</y><w>184</w><h>128</h></coordinates><panel_attributes>FormField
++ concept: string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1225</x><y>520</y><w>64</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
+Eloallitja</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1305</x><y>520</y><w>64</w><h>208</h></coordinates><panel_attributes>lt=&lt;.
+Eloallitja</panel_attributes><additional_attributes>10;240;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1065</x><y>768</y><w>320</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
+Az autherType-ot Auther osztaly peldanyozva alakitja at</panel_attributes><additional_attributes>290;10;290;180;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>857</x><y>608</y><w>184</w><h>128</h></coordinates><panel_attributes>FormField
 --
 - inputElement: HTMLInput
 - errorDiv: HTMLDivElement
@@ -88,7 +89,7 @@ Az autherType-ot Auther osztaly peldanyozva alakitja at</panel_attributes><addit
 parent: HTMLElement)
 + validate(): boolean
 + get name(): string
-+ get value(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>464</y><w>104</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
-m1=0..*</panel_attributes><additional_attributes>10;180;10;150;50;150;50;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1144</x><y>752</y><w>112</w><h>32</h></coordinates><panel_attributes>ImportResultCallback
++ get value(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>953</x><y>464</y><w>104</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..*</panel_attributes><additional_attributes>10;180;10;150;50;150;50;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1425</x><y>752</y><w>112</w><h>32</h></coordinates><panel_attributes>ImportResultCallback
 --
-(message: string): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>776</y><w>416</w><h>168</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>500;10;500;190;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>1176</x><y>520</y><w>24</w><h>248</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>512</y><w>136</w><h>312</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;10;150;340;10;340;10;370</additional_attributes></element><element><id>Relation</id><coordinates><x>544</x><y>552</y><w>24</w><h>264</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>784</x><y>520</y><w>368</w><h>408</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>440;10;440;490;10;490</additional_attributes></element></diagram>
+(message: string): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1065</x><y>776</y><w>416</w><h>168</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>500;10;500;190;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>1457</x><y>520</y><w>24</w><h>248</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>929</x><y>512</y><w>136</w><h>312</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;10;150;340;10;340;10;370</additional_attributes></element><element><id>Relation</id><coordinates><x>825</x><y>552</y><w>24</w><h>264</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>1065</x><y>520</y><w>368</w><h>408</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>440;10;440;490;10;490</additional_attributes></element></diagram>
