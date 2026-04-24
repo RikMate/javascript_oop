@@ -9,7 +9,7 @@ import { AutherManager } from "./manager.js";
 import { NavigationBar } from "./navigationBar.js"
 import { TableView } from "./table.js";
 
-const formFields = [{
+const formFields = [{ // létrehozunk egy formField listát
     id: 'author',
     label: 'Név',
     name: 'author'
@@ -25,22 +25,22 @@ const formFields = [{
     name: 'concept'
 }]
 
-const headerArray = ['Szerző', 'Mű', 'Fogalom']
+const headerArray = ['Szerző', 'Mű', 'Fogalom'] // létrehozunk egy header listát
 
 const navbar = new NavigationBar();
 const manager = new AutherManager();
-navbar.appendTo(document.body);
+navbar.appendTo(document.body); // hozzáfüzzük a nabart a document.body-hoz
 
-const tableView = new TableView("table", headerArray, manager);
-tableView.appendTo(document.body);
-navbar.addViewElement("Táblázat", tableView);
+const tableView = new TableView("table", headerArray, manager); // példányosítjuk a table-t
+tableView.appendTo(document.body); // hozzáfüzzük a tablet a document.body-hoz
+navbar.addViewElement("Táblázat", tableView); // hozzáadjuk a formcontrollert az tablehez
 
-const formView = new FormView("tableform", formFields, manager);
-formView.appendTo(document.body);
-navbar.addViewElement("Form", formView);
+const formView = new FormView("tableform", formFields, manager); // példányosítjuk a formot
+formView.appendTo(document.body); // hozzáfüzzük a formot a document.body-hoz
+navbar.addViewElement("Form", formView); // hozzáadjuk a formcontrollert az formhoz
 
-const importExport = new ImportView("importexport", manager);
-importExport.appendTo(document.body);
-navbar.addViewElement("Export/Import", importExport);
+const importExport = new ImportView("importexport", manager); // példányosítjuk az importexportot
+importExport.appendTo(document.body); // hozzáfüzzük a importexport-t a document.body-hoz
+navbar.addViewElement("Export/Import", importExport); // hozzáadjuk a formcontrollert az importexporthoz
 
-navbar.activate("table");
+navbar.activate("table"); // meghívjuk a navbar activate metódusát a table azonosítójával
